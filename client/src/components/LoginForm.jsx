@@ -10,7 +10,7 @@ export const LoginForm = () => {
 
   const handleLogin = async () => {
     try {
-      const response = await axios.get('http://127.0.0.1:8000/project/api/login/');
+      const response = await axios.get('http://127.0.0.1:8000/project/api/users/');
 
       const user = response.data.find(user => user.correo === email && user.password === password);
 
