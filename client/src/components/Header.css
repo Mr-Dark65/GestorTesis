@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.Header{
+    background: rgb(151, 23, 43);
+    height: 6rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 0.5rem;
+}
+
+
+.imagen img{
+    margin-top: 1rem;
+    width: auto;
+    height: 150px;
+    margin-left: 1px;
+}
+
+.Texto{
+    color: white;
+    margin-right: 5rem;
+}

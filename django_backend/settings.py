@@ -55,7 +55,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'django_api.urls'
+ROOT_URLCONF = 'django_backend.urls'
 
 TEMPLATES = [
     {
@@ -73,7 +73,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'django_api.wsgi.application'
+WSGI_APPLICATION = 'django_backend.wsgi.application'
 
 
 # Database
@@ -82,7 +82,7 @@ WSGI_APPLICATION = 'django_api.wsgi.application'
 DATABASES = {
     'default': {
         "ENGINE": "django.db.backends.postgresql",
-        'NAME': 'proyectoagil',
+        'NAME': 'gestortesis',
         "USER": "postgres",
         "PASSWORD": "StevenLoor24",
         "HOST": "127.0.0.1",

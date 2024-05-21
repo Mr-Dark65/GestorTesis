@@ -1,0 +1,46 @@
+.content-box{
+    border: 2px solid black;
+    border-radius: 10px;
+    justify-content: center;
+    width: 350px;
+    height: 500px;
+    margin: 2rem 0 auto 33rem;
+    padding: 15px;
+}
+
+.content-box h2{
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.content-box .imagen img {
+    width: auto;
+    height: 90px;
+}
+
+.content-box .content-input label{
+    display: block;
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+    margin-left: 2rem;
+    
+}
+
+.content-box .content-input input{
+    width: 250px;
+    height: 30px;
+    margin-left: 2rem;
+}
+
+.content-box .button-inicio{
+    margin-top: 3rem;
+    margin-left: 5.9rem;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(151, 23, 43);
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    text-align: center;
+}
