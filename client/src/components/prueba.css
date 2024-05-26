@@ -1,0 +1,306 @@
+.main-container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .header {
+    width: 100%;
+    height: 1cm; /* Altura de aproximadamente 1cm */
+    background-color: rgb(71, 69, 69);
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+  }
+  
+  .home-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .home-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none; /* Eliminamos el subrayado del enlace */
+  }
+  
+  .nav-link {
+    text-decoration: none;
+  }
+  
+  .nav-bar {
+    display: flex;
+    align-items: center;
+    background-color: #ad272e;
+    padding: 8px;
+    color: white;
+  }
+  
+  .home-icon {
+    margin-right: 8px;
+  }
+  
+  .home-text {
+    margin-left: 8px;
+    font-size: 18px;
+    color: #fff; /* Color del texto */
+  }
+  
+  .home-link:hover .home-text {
+    color: #ad272e; /* Color del texto cuando se pasa el cursor */
+  }
+  
+  .container {
+    position: relative;
+    width: 100%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .header-content {
+    position: absolute;
+    top: 20px;
+    left: 10px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .icon-container {
+    margin-right: 10px;
+  }
+  
+  .icon {
+    font-size: 24px;
+    color: #000;
+  }
+  
+  .username-container {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+  }
+  
+  .username {
+    font-size: 16px;
+    padding: 5px;
+  }
+  
+  .filter-container {
+    width: 200px;
+    margin-right: 20px;
+    position: relative;
+    margin-left: 195px;
+  }
+  
+  .filter-combobox {
+    width: 100%;
+    height: 36px; /* Altura del combobox */
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .search-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 450px; /* Aumentamos el ancho en 3 cm */
+    margin-left: 40px;
+  }
+  
+  .search-input {
+    width: 100%;
+    height: 36px; /* Altura del campo de búsqueda */
+    padding: 5px;
+    padding-right: 40px; /* Espacio para el icono de búsqueda */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
+  .search-icon {
+    position: absolute;
+    right: 10px;
+    font-size: 16px;
+    color: #ad272e;
+    cursor: pointer;
+  }
+  
+  .add-student-container {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 110px;
+    left: calc(45% - 250px - 48px); /* Mover 3 cm a la izquierda */
+  }
+  
+  .add-student-button {
+    width: 25px;
+    height: 25px;
+    background-color: #ad272e;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+  
+  .plus-icon {
+    font-size: 16px; /* Tamaño del icono */
+    color: #fff;
+  }
+  
+  .add-student-text {
+    margin-left: 10px;
+    font-size: 16px;
+    color: #000;
+  }
+  
+  .message {
+    font-size: 18px; /* Tamaño del mensaje */
+  }
+  
+  .table-container {
+    margin-top: -32px;
+  }
+  
+  .table {
+    width: calc(100% + 48px);
+    height: calc(100% + 48px);
+    border-collapse: collapse;
+    border: 1px solid #ad272e;
+  }
+  
+  th, td {
+    padding: 20px;
+    text-align: center;
+    border: 1px solid #ad272e;
+  }
+  
+  th {
+    background-color: #ad272e;
+    color: #fff;
+    text-align: center;
+  }
+  
+  .wide-column {
+    width: 250px; /* Ancho de la primera columna */
+  }
+  
+  th:first-child, td:first-child {
+    width: 400px;
+  }
+  
+  th:nth-child(2), td:nth-child(2) {
+    width: 175px;
+  }
+  
+  th:nth-child(3), td:nth-child(3) {
+    width: 175px;
+  }
+  
+  .search-button {
+    background-color: #ad272e;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    border-radius: 5px; /* Radio de los bordes */
+    margin-left: 25px;
+  }
+  
+  .search-button:hover {
+    background-color: #8a1d21;
+  }
+  
+  .order-button {
+    background-color: #ad272e;
+    color: white;
+    border: none;
+    padding: 10px 30px;
+    cursor: pointer;
+    border-radius: 5px;
+    display: block;
+    margin-top: 16px;
+  }
+  
+  .order-button:hover {
+    background-color: #8a1d21;
+  }
+  
+  /* Media Queries para hacer el diseño responsive */
+  
+  @media (max-width: 768px) {
+    .header-content {
+      flex-wrap: wrap;
+    }
+  
+    .search-container,
+    .filter-container {
+      width: 100%;
+      max-width: none;
+      margin-left: 0;
+      margin-top: 10px;
+    }
+  
+    .filter-container {
+      margin-left: 0;
+    }
+  
+    .add-student-container {
+      top: auto;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 20px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .header-content {
+      top: 10px;
+      left: 5px;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .username {
+      font-size: 14px;
+    }
+  
+    .filter-combobox,
+    .search-input {
+      height: 30px;
+    }
+  
+    .search-input {
+      font-size: 14px;
+    }
+  
+    .add-student-button {
+      width: 20px;
+      height: 20px;
+    }
+  
+    .plus-icon {
+      font-size: 14px;
+    }
+  
+    .add-student-text {
+      font-size: 14px;
+    }
+  
+    .table-container {
+      margin-top: -20px;
+    }
+  
+    .order-button {
+      padding: 8px 20px;
+      font-size: 14px;
+    }
+  }
+  

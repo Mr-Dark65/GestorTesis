@@ -15,7 +15,7 @@ export const LoginForm = () => {
       const user = response.data.find(user => user.correo === email && user.password === password);
 
       if (user) {
-        
+        localStorage.setItem('userName', user.tutor.nombre);
         window.location.href = '/Prueba';
         setError('');
       } else {
