@@ -29,24 +29,39 @@ class LoginView(APIView):
         serializer = UsuarioSerializer(usuario)
         return Response(serializer.data)
     
-    
+class FilterOptionsView(APIView):
+    def get(self, request):
+        carreras = Carrera.objects.all()
+        estudiantes = Estudiante.objects.all()
+        avances = Avance.objects.all()
 
-class FacultadViewSet(viewsets.ModelViewSet):
-    queryset = Facultad.objects.all()
-    serializer_class = FacultadSerializer
+        carrera_serializer = CarreraSerializer(carreras, many=True)
+        estudiante_serializer = EstudianteSerializer(estudiantes, many=True)
+        avance_serializer = AvanceSerializer(avances, many=True)
+
+        return Response({
+            'carreras': carrera_serializer.data,
+            'estudiantes': estudiante_serializer.data,
+            'avances': avance_serializer.data
+        }, status=status.HTTP_200_OK)
 
 class CarreraViewSet(viewsets.ModelViewSet):
     queryset = Carrera.objects.all()
     serializer_class = CarreraSerializer
+    
+class EstudianteViewSet(viewsets.ModelViewSet):
+    queryset = Estudiante.objects.all()
+    serializer_class = EstudianteSerializer
+    
+class AvanceViewSet(viewsets.ModelViewSet):
+    queryset = Avance.objects.all()
+    serializer_class = AvanceSerializer
+    
+class FacultadViewSet(viewsets.ModelViewSet):
+    queryset = Facultad.objects.all()
+    serializer_class = FacultadSerializer
 
 class TutorViewSet(viewsets.ModelViewSet):
     queryset = Tutor.objects.all()
     serializer_class = TutorSerializer
-
-class EstudianteViewSet(viewsets.ModelViewSet):
-    queryset = Estudiante.objects.all()
-    serializer_class = EstudianteSerializer
-
-class AvanceViewSet(viewsets.ModelViewSet):
-    queryset = Avance.objects.all()
-    serializer_class = AvanceSerializer
+    

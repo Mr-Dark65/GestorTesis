@@ -16,6 +16,7 @@ export const LoginForm = () => {
 
       if (user) {
         localStorage.setItem('userName', user.tutor.nombre);
+        localStorage.setItem('userId', user.id_usuario);
         window.location.href = '/Prueba';
         setError('');
       } else {
